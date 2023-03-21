@@ -1,0 +1,100 @@
+version: 2
+
+sources:
+
+  - name: fbads_adv
+    description: Adverity data pull (parent) for Facebook Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_facebook_campaignperf_rnf_monthly
+      - name: parent_facebook_campaignperf_rnf_weekly
+      - name: parent_facebook_campaignperf_rnf_daily
+      - name: parent_facebook_adperf_rnf_weekly
+      - name: parent_facebook_adperf_rnf_daily
+      - name: parent_facebook_accountperf_rnf_monthly
+      - name: parent_facebook_accountperf_rnf_weekly
+      - name: parent_facebook_accountperf_rnf_daily
+      - name: parent_facebook_adperf_placementdevice_daily
+      - name: parent_facebook_adperf_agegender_daily
+
+  - name: gads_adv
+    description: Adverity data pull (parent) for Google Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_googleads_campaign_daily
+      - name: parent_googleads_campaign_conversionbreakdown_daily
+      - name: parent_googleads_adperf_daily
+      - name: parent_googleads_conversiontype_daily
+      - name: parent_googleads_adgroup_base_daily
+
+  - name: linkedin_adv
+    description: Adverity data pull (parent) for LinkedIn Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_linkedin_adperf_creative_daily
+      - name: parent_linkedin_adperf_conv_daily
+  
+  - name: tiktok_adv
+    description: Adverity data pull (parent) for Tiktok Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_tiktok_adperf_daily
+
+  - name: dv360_adv
+    description: Adverity data pull (parent) for DV360
+    dataset: adverityexport
+    tables:
+      - name: parent_dv360_lineitemperf_daily
+  
+  - name: twitter_adv
+    description: Adverity data pull (parent) for Twitter Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_twitterads_tweet_promocreative_daily
+      - name: parent_twitterads_campaign_daily
+
+  - name: quora_adv
+    description: Adverity data pull (parent) for Quora Ads
+    dataset: adverityexport
+    tables: 
+      - name: parent_quora_adlevel_daily
+
+  - name: reddit_adv
+    description: Adverity data pull (parent) for Quora Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_redditads_campaign_daily
+
+  - name: bing_adv
+    description: Adverity data pull (parent) for Bing (Microsoft) Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_bingads_campaign_daily
+
+  - name: apple_adv
+    description: Adverity data pull (parent) for Apple Ads
+    dataset: adverityexport
+    tables:
+      - name: parent_appleads_campaign_daily
+
+  - name: currency_convert
+    dataset: currency_rates
+    tables:
+      - name: sgd_conversion
+        description: Current SGD conversion rates for today from Google Finance. Connected to external Google Sheet.
+      - name: usd_conversion
+        description: Current USD conversion rates for today from Google Finance. Connected to external Google Sheet.
+      - name: cny_conversion
+        description: Current CNY conversion rates for today from Google Finance. Connected to external Google Sheet.
+
+  - name: sample_clients
+    description: Metadata/information for clients
+    tables:
+      - name: gsheet_sampleclients
+        description: Google Sheet table for sample clients
+  
+  - name: clickup_adv
+    description: Exports from ClickUp API to Adverity
+    dataset: adverityexport
+    tables:
+      - name: parent_clickup_task_timespent_daily

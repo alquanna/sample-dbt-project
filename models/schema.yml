@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: sendhelper_twitter_creative_daily
+    columns:
+      - name: impressions
+        tests:
+          - unique
